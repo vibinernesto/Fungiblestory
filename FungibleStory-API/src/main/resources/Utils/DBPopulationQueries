@@ -1,0 +1,6 @@
+INSERT INTO public.country(country_id,country) values (1,'india');
+INSERT INTO public.role(role_id,role_name) values (1,'contentcreator');
+INSERT INTO public.users(
+	created_at, date_of_birth, display_name, first_name, gender, last_name, password, phone_number, updated_at, user_email, is_deleted, country_id, role_id)
+	VALUES ( current_timestamp, '1994-04-01', 'Vibin Guevara', 'vibin', 'Male', 'guevara', '12345', '+918526363508', current_timestamp, 'vibincs@gmail.com', false, 1, 1);
+	
