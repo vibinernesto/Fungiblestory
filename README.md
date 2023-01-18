@@ -2,16 +2,16 @@
 A open-source talent hunt platform for the writers of all sorts
 
 ## DB:
-PostgreSQL
-Version: Latest
+- PostgreSQL
+- Version: Latest
 
 ## Build:
-Maven
-Java version: 11
+- Maven
+- Java version: 11
 
 ## Framework:
-Springboot
-Version: 2.7.3
+- Springboot
+- Version: 2.7.3
 
 ## Setup:
 1. git pull origin dev
