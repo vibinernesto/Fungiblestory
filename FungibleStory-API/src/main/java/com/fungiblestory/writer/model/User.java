@@ -64,18 +64,19 @@ public class User implements Serializable {
 	@CreationTimestamp
 	private Date CreatedAt;
 
-	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
 	@JoinColumn(name = "CountryId")
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	private Country country;
 
-	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
 	@JoinColumn(name = "RoleId")
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	private Role role;
 	
 	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST, mappedBy = "UserId")
 	private Jobs jobs;
+
 
 	public Role getRole() {
 		return role;

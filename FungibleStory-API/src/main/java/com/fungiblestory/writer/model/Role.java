@@ -22,13 +22,13 @@ public class Role implements Serializable {
 
 	@Column(name = "RoleId", updatable = false, nullable = false)
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long RoleId;
 
 	@Column(name = "RoleName", updatable = false, nullable = false)
 	private String RoleName;
 
-	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "role")
+	@OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.MERGE,mappedBy = "role")
 	private User user;
 
 	public Long getRoleId() {

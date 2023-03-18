@@ -22,13 +22,13 @@ public class Country implements Serializable {
 
 	@Column(name = "CountryId", updatable = false, nullable = false)
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long CountryId;
 
 	@Column(name = "Country", updatable = false, nullable = false)
 	private String Country;
 
-	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "country")
+	@OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.MERGE,mappedBy = "country")
 	private User user;
 
 	public Long getCountryId() {
